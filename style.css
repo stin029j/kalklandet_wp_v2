@@ -1,0 +1,900 @@
+@font-face {
+    font-family: LimeStone_light;
+    src: url(font/Limestone_light.otf);
+}
+
+body {
+    border: 0;
+    font-family: limestone_light;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/*       header       */
+/* MENU START */
+
+header {
+    background: #3E3D3D;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    top: 0;
+    font-family: Arial, cursive;
+}
+
+
+
+li {
+    float: left;
+}
+
+li a {
+    display: flex;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1.3rem;
+    line-height: 10vh;
+    color: white;
+}
+
+li a {
+    display: flex;
+    justify-content: center;
+}
+
+li a:hover {
+    color: rgba(255, 255, 255, 0.54);
+}
+
+li:first-child {
+    padding: 10px;
+}
+
+/*MENU SLUT*/
+
+/*BURGERMENU*/
+#menuknap {
+    font-size: 3rem;
+    cursor: pointer;
+    color: #DEDEDE;
+    font-family: 'Comfortaa', cursive;
+}
+
+#menu {
+    transition: transform 0.3s;
+    list-style-type: none;
+    transform-origin: top left;
+    /*    padding-bottom: 20px;*/
+    /*    width: 200px;*/
+}
+
+#burger {
+    width: 200px;
+    z-index: 2;
+    margin-left: 20px;
+}
+
+
+#menu li {
+    margin: 10px;
+    display: block;
+}
+
+#menu a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-align: left;
+}
+
+#menu a:hover {
+    color: white;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+/*MEDIA*/
+
+@media only screen and (min-width: 900px) {
+
+
+    #burger {
+        display: none;
+    }
+
+    .navbar {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    li a {
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    li a {
+        font-size: 1.1rem;
+    }
+}
+
+/* MEDIA SLUT */
+
+/*BURGERMENU SLUT*/
+
+/*       header slut      */
+
+/*  FORSIDE START  */
+
+/* SPLASH START*/
+
+#splash {
+    position: relative;
+    height: 88vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(rgba(7, 6, 6, 0.5), rgba(46, 42, 43, 0.51)), url(pics/IMG_5553.JPG);
+}
+
+.arrow {
+    position: absolute;
+    left: 48%;
+    top: 85%;
+    width: 60px;
+    height: 60px;
+    transition: .5s;
+    box-shadow: -3px 3px 0 rgba(255, 255, 255, .5);
+    transform: rotate(-45deg);
+    cursor: pointer;
+}
+
+.arrow:hover {
+    box-shadow: -3px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* SPLASH SLUT*/
+
+/* VELKOMMEN START */
+.container_geomuseum,
+.container_koldkrigsmuseum,
+.container_stevnsklint {
+    position: relative;
+    width: 50%;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.62);
+}
+
+.container_geomuseum:hover .overlay,
+.container_koldkrigsmuseum:hover .overlay,
+.container_stevnsklint:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#velkommen {
+    line-height: 25px;
+}
+
+#velkommen h1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 5rem;
+    font-family: limestone_light;
+    padding-top: 15vh;
+}
+
+#velkommen h2 {
+    font-weight: 100;
+    font-size: 2rem;
+    text-align: center;
+
+}
+
+#velkommen p {
+    font-weight: 100;
+    font-size: 1.05rem;
+    text-align: center;
+    line-height: 18px;
+    margin: 2vw 5vw 7vw;
+}
+
+.container_geomuseum {
+    height: 230px;
+    width: 430px;
+    margin: 8px;
+
+}
+
+.container_koldkrigsmuseum {
+    height: 230px;
+    width: 430px;
+    margin: 8px;
+}
+
+.container_stevnsklint {
+    height: 230px;
+    width: 430px;
+    margin: 8px;
+}
+
+.container_velkommen {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 11vw;
+
+}
+
+
+/*MEDIA*/
+@media only screen and (max-width: 1350px) {
+
+    #splash img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #velkommen h1 {
+        font-size: 4rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {}
+
+@media only screen and (max-width: 800px) {
+    #velkommen h1 {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #velkommen h1 {
+        font-size: 2rem;
+    }
+}
+
+/* MEDIA SLUT */
+
+
+/* VELKOMMEN SLUT */
+
+
+
+/*       besoeg os       */
+#splash_besoeg {
+    position: relative;
+    height: 25vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    background-image: linear-gradient(rgba(7, 6, 6, 0.5), rgba(46, 42, 43, 0.51)), url(pics/IMG_5553.JPG);
+}
+
+#forside_besoeg h1 {
+    text-align: center;
+    font-size: 5rem;
+}
+
+#forside_besoeg {
+    height: 42vw;
+}
+
+.arrow_besoeg {
+    position: absolute;
+    left: 48%;
+    top: 85%;
+    width: 60px;
+    height: 60px;
+    transition: .5s;
+    box-shadow: -3px 3px 0 rgba(8, 8, 8, 0.5);
+    transform: rotate(-45deg);
+    cursor: pointer;
+}
+
+.arrow_besoeg:hover {
+    box-shadow: -3px 3px 0 rgba(252, 252, 252, 0.5);
+}
+
+.container_besoeg {
+    padding: 20px;
+}
+
+.besoeg_geomuseum {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.boks_geomuseum {
+    background-color: #C6C5C5;
+    padding: 25px;
+    margin: 0;
+}
+
+.besoeg_koldkrigsmuseum {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.boks_koldkrigsmuseum {
+    background-color: #EAEAEA;
+    padding: 25px;
+    margin: 0;
+}
+
+.besoeg_stevnsklint {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.boks_stevnsklint {
+    background-color: grey;
+    padding: 25px;
+}
+
+.besoeg_geomuseum {
+    margin: 0;
+}
+
+
+#besoeg h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+#besoeg .geo_text {}
+
+#besoeg .geo_pic {}
+
+
+
+/*       besoeg os slut       */
+
+
+/*       billetter        */
+
+#top {
+    height: 95vh;
+}
+
+
+#top a {
+    text-decoration: none;
+    line-height: 40px;
+    font-size: 1.5rem;
+    color: dimgrey;
+}
+
+#top a:hover {
+    color: #ffa700;
+}
+
+#top a:active {
+    color: #656565;
+}
+
+#top a:visited {
+    color: #3800b5;
+}
+
+.left-1 {
+    margin-top: 50px;
+    padding: 20px;
+    width: 25vw;
+    height: 30vh;
+    background-color: #f7f7f7;
+    text-align: right;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 5rem;
+    text-align: center;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+#priser_booking {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 95vh;
+    padding-top: 10px;
+    padding-right: 250px;
+    padding-left: 250px;
+    background-color: #f8f8f8;
+    font-size: 1.2rem;
+
+}
+
+.right-1 a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    line-height: 35px;
+    font-weight: 400;
+}
+
+.right-1 a:hover {
+    color: #ffa700;
+}
+
+.right-1 a:active {
+    color: #656565;
+}
+
+.right-1 a:visited {
+    color: #3800b5;
+}
+
+#ture {
+    text-align: center;
+    height: 10vh;
+}
+
+.left-3 {
+    min-width: 100px;
+    min-height: 200px;
+    margin: 10px;
+
+}
+
+.right-2 {
+    min-width: 100px;
+    min-height: 200px;
+    margin: 10px;
+}
+
+.tekst {
+    text-align: center;
+}
+
+#ture_tekst {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 95vh;
+    margin-top: 10px;
+    margin-right: 250px;
+    margin-left: 250px;
+
+}
+
+
+
+
+/*       billetter slut        */
+
+/*       billetter formular       */
+#formular {
+    background-color: #c4c4c4;
+    -webkit-box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
+    box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
+    animation: slideUp 2000ms ease;
+    width: 100%;
+    padding: 30px;
+}
+
+@keyframes slideUp {
+    0% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+        visibility: visible;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+
+    }
+}
+
+.udfyld {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 300px
+}
+
+label {
+    margin: 5px;
+}
+
+input {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+    width: 15vw;
+    height: 3vh;
+}
+
+.privat {
+    min-height: 10vh;
+    min-width: 20vw;
+}
+
+.kortinformation {
+    min-height: 10vh;
+    min-width: 20vw;
+}
+
+.kort-overskrift {}
+
+.buttons {
+
+    padding: 10px;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 2px;
+}
+
+/*       billetter formular slut       */
+
+
+/*       undervisning       */
+#undervisning .splash {
+    width: 100%;
+}
+
+#undervisning h1,
+#undervisning h3 {
+    text-align: center;
+    font-family: limestone_light;
+}
+
+#undervisning h1 {
+    font-size: 5rem;
+    margin: 10px;
+}
+
+#undervisning h2 {
+    font-size: 1.3rem;
+    margin: 20px;
+}
+
+#undervisning h3 {
+    font-size: 2rem;
+}
+
+#undervisning .undervisnings_boks {
+    display: flex;
+    background-color: #bebebe;
+    max-width: 1600px;
+    margin-top: 60px;
+    height: 600px;
+
+}
+
+#undervisning .muligheder {
+    margin-top: 150px;
+    width: 80%;
+    font-family: limestone_light;
+    flex-wrap: wrap;
+    background-color: white;
+    height: 300px;
+    padding: 20px;
+
+}
+
+
+
+#undervisning .fag {
+    width: 100%;
+    font-family: limestone_light;
+    flex-wrap: wrap;
+    color: white;
+    padding: 40px;
+
+
+}
+
+#undervisning .steder {
+    width: 100%;
+    font-family: limestone_light;
+    flex-wrap: wrap;
+    color: white;
+    padding: 40px;
+
+
+}
+
+#undervisning .overskrift {
+    text-align: center;
+    font-family: limestone_light;
+    font-size: 3rem;
+}
+
+#undervisning .naturfag {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: limestone_light;
+
+
+
+
+}
+
+#undervisning .geografi {
+    max-width: 500px;
+    padding: 20px;
+
+
+}
+
+#undervisning .natgeo {
+    max-width: 500px;
+    padding: 20px;
+
+}
+
+#undervisning .natgrund {
+    max-width: 500px;
+    padding: 20px;
+
+}
+
+#undervisning .natfaggruppe {
+    max-width: 500px;
+    padding: 20px;
+
+}
+
+#undervisning .hissamf {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: limestone_light;
+}
+
+#undervisning .historie {
+    max-width: 500px;
+    padding: 20px;
+
+}
+
+#undervisning .samfundsfag {
+    max-width: 500px;
+    padding: 20px;
+
+}
+
+/*       undervisning slut      */
+
+
+
+
+/*       billetter      */
+
+#billetter {
+    margin: 5vw;
+}
+
+
+/*det er som at den tror at den skal lytte til det her indhold i header nav*/
+#billettder a {
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 10vh;
+
+}
+
+/*       billetter slut      */
+
+
+
+
+
+
+
+
+
+
+
+
+
+#bestil {}
+
+#gaa-til-betaling {
+    background-image: url(svg/betaling.svg);
+    background-repeat: no-repeat;
+    width: 50vw;
+    height: 10vh;
+}
+
+input {
+    width: 60vw;
+    height: 4vh;
+}
+
+
+#ordre {}
+
+
+/*       footer       */
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*    width: 100%;*/
+    background-color: #3E3D3D;
+    font-family: limestone_light;
+}
+
+.boks_1,
+.boks_2,
+.boks_3 {
+    padding: 10px;
+    margin: 100px 40px;
+}
+
+.boks_2,
+.boks_3 {
+    text-align: center;
+}
+
+footer h1,
+footer p {
+    color: white;
+    font-family: Arial, cursive;
+}
+
+footer h1 {
+    font-size: 2rem;
+}
+
+.container_kort {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2vw;
+    min-height: 35vw;
+}
+
+.kort iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.footer_tekst {
+    margin: 20px;
+}
+
+.footer_tekst h1 {
+    font-size: 2rem;
+}
+
+
+/*MEDIA START*/
+@media only screen and (max-width: 900px) {
+    footer p {
+        font-size: .6rem;
+    }
+
+    footer h1 {
+        font-size: 1.2rem;
+    }
+}
+
+
+@media only screen and (max-width: 750px) {
+    .container_kort {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2vw;
+        min-height: 35vw;
+    }
+
+    .kort iframe {
+        width: 50%;
+        height: 150%;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    footer p {
+        font-size: .6rem;
+    }
+
+    footer h1 {
+        font-size: 1.2rem;
+    }
+
+    .kort iframe {
+        width: 100vw;
+        height: 60vw;
+    }
+
+    .boks_1,
+    .boks_2,
+    .boks_3 {
+        padding: 20px;
+        margin: 20px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    footer {
+        flex-direction: column;
+    }
+}
+
+
+
+/*MEDIA STLUT*/
+
+
+/*       footer slut       */

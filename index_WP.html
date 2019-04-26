@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Besøg os</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="font" href="font/LimeStone_light.otf">
+</head>
+
+<style>
+    header {}
+
+
+    img {
+        width: 50%;
+        height: 56.25%;
+    }
+
+</style>
+
+<body>
+    <header>
+        <nav class="navbar hidden">
+            <ul>
+                <li><a href="index.html"><img src="logo/Logo.svg" alt=""></a></li>
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="besoeg.html">Besøg os</a></li>
+                <li><a href="undervisning.html">Undervisning</a></li>
+                <li><a href="aktuelt.html">Aktuelt</a></li>
+                <li><a href="billetter.html">Køb billetter</a></li>
+                <li><a href="#footer">Kontakt</a></li>
+            </ul>
+        </nav>
+
+
+        <nav id="burger">
+            <div id="menuknap">☰</div>
+            <ul id="menu" class="hidden">
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="menu.html">Besøg os</a></li>
+                <li><a href="om_og_kontakt.html">Undervisning</a></li>
+                <li><a href="om_og_kontakt.html">Aktuelt</a></li>
+                <li><a href="om_og_kontakt.html">Køb billetter</a></li>
+                <li><a href="#footer">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <h1 class="overskrift"></h1>
+    <main class="indhold"></main>
+    <img src="" alt="">
+
+
+
+
+    <script>
+        let indhold;
+        document.addEventListener("DOMContentLoaded", getJson);
+
+        async function getJson() {
+            let url = "http://madsbjergmedia.dk/kea/tema7/kalklandet/wordpress/wp-json/wp/v2/forside/10"
+            let jsonData = await fetch(url);
+            indhold = await jsonData.json();
+
+            visInhold();
+        }
+
+        function visInhold() {
+            document.querySelector(".overskrift").innerHTML = indhold.title.rendered;
+            document.querySelector(".indhold").innerHTML = indhold.content.rendered;
+            document.querySelector("img").src = indhold.billede.guid;
+
+
+            getJson();
+        }
+
+    </script>
+</body>
+
+</html>

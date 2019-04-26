@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Besøg os</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="font" href="font/LimeStone_light.otf">
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+    <header>
+        <nav class="navbar hidden">
+            <ul>
+                <li><a href="index.html"><img src="logo/Logo.svg" alt=""></a></li>
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="besoeg.html">Besøg os</a></li>
+                <li><a href="undervisning.html">Undervisning</a></li>
+                <li><a href="aktuelt.html">Aktuelt</a></li>
+                <li><a href="billetter.html">Køb billetter</a></li>
+                <li><a href="#footer">Kontakt</a></li>
+            </ul>
+        </nav>
+
+
+        <nav id="burger">
+            <div id="menuknap">☰</div>
+            <ul id="menu" class="hidden">
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="menu.html">Besøg os</a></li>
+                <li><a href="om_og_kontakt.html">Undervisning</a></li>
+                <li><a href="om_og_kontakt.html">Aktuelt</a></li>
+                <li><a href="om_og_kontakt.html">Køb billetter</a></li>
+                <li><a href="#footer">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <h1 class="overskrift"></h1>
+    <main class="indhold"></main>
+    <img src="" alt="">
+
+
+
+    <section class="container_kort">
+        <aside class="footer_tekst">
+            <h1>Lorem Ipsum</h1>
+            <p> Ne elit voluptate incididunt. Ut ita tamen fabulas, pariatur in ingeniis an anim
+                excepteur litteris, e cupidatat fidelissimae, noster proident coniunctione o
+                eiusmod enim quibusdam, mentitum aut sint fabulas, an sunt lorem eu nescius. Id
+                ubi ipsum eram fugiat. Ipsum te expetendis o sint, irure laborum ex noster
+                summis qui ea nulla magna eu incididunt nam ab ea exquisitaque. Ea fugiat
+                cupidatat aut nam se concursionibus ab probant velit anim e quid, possumus ea
+                illum officia. Veniam litteris te relinqueret de ad quo fore proident, amet
+                laborum a dolor lorem, quem proident de commodo ne deserunt ea quae, tempor iis
+                excepteur ubi ingeniis exercitation ea offendit, pariatur ita aute. Ex quis anim
+                aute arbitror ad ita varias firmissimum. A fugiat senserit comprehenderit,
+                eiusmod veniam quid consequat minim a iis noster nescius incurreret, e an
+                transferrem, arbitror dolor sunt ne dolore ab esse doctrina o culpa magna te ne
+                aut arbitrantur an quibusdam aliqua dolor qui summis.</p>
+        </aside>
+        <div class="kort">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51929.749367493954!2d12.408874405869168!3d55.301164527304095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652e275cdcf5869%3A0x92fe4879c900f5da!2sStevns+Naturcenter!5e0!3m2!1sda!2sdk!4v1556126997634!5m2!1sda!2sdk" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+
+    </section>
+    <script>
+        let indhold;
+        document.addEventListener("DOMContentLoaded", getJson);
+
+        async function getJson() {
+            let url = "http://madsbjergmedia.dk/kea/tema7/kalklandet/wordpress/wp-json/wp/v2/aktuelt/33"
+            let jsonData = await fetch(url);
+            indhold = await jsonData.json();
+
+            visInhold();
+        }
+
+        function visInhold() {
+            document.querySelector(".overskrift").innerHTML = indhold.title.rendered;
+            document.querySelector(".indhold").innerHTML = indhold.content.rendered;
+            document.querySelector("img").src = indhold.billede.guid;
+
+
+            getJson();
+        }
+
+    </script>
+</body>
+
+</html>
